@@ -308,7 +308,7 @@ footer {
         animation: none;
 		
         box-sizing: border-box;
-        padding-top: 80px; /* Un padding un poco menor para el menú móvil */		
+        padding-top: 100px; /* Un padding un poco menor para el menú móvil */		
     }
 
     /* Ajuste adicional para que el logo no sea tan grande en la nueva altura */
