@@ -18,7 +18,7 @@ body {
 /* --- Hero Section --- */
 .hero {
     height: 100vh;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/img/foto_de_fondo.jpg'); /* Elige tu mejor foto para el fondo */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/img/foto_de_fondo.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -26,6 +26,14 @@ body {
     align-items: center;
     text-align: center;
     color: white;
+    overflow: hidden; /* Muy importante para que la imagen no se desborde al hacer zoom */
+    animation: kenburns-zoom 15s ease-out forwards;
+    /*
+       kenburns-zoom: El nombre de la animación que creamos.
+       15s: La duración. Puedes aumentarla para un efecto más lento (ej. 20s) o disminuirla.
+       ease-out: Hace que la animación termine suavemente.
+       forwards: Asegura que la imagen se quede en su estado final (zoom 115%) y no vuelva al inicio.
+    */
 }
 
 .hero-content {
@@ -198,3 +206,13 @@ footer {
     transform: translateY(0); /* Vuelve a su posición original */
 }
 
+/* --- INICIO: Código para la animación Ken Burns --- */
+@keyframes kenburns-zoom {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15); /* Aumenta el zoom al 115% */
+  }
+}
+/* --- FIN: Código para la animación Ken Burns --- */
