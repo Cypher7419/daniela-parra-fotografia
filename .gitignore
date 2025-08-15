@@ -1,0 +1,10 @@
+# Ignorar todos los archivos de texto simple
+#*.txt
+
+# Ignorar archivos específicos de notas o borradores
+#notas.md
+#borrador.docx
+PASOS GITHUB.txt
+
+# (Ejemplo) Ignorar una carpeta completa de archivos privados
+#/documentos_privados/
