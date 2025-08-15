@@ -1,13 +1,28 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Aquí podemos añadir interactividad en el futuro.
-    
-    // Ejemplo: Manejo del formulario para mostrar un mensaje de éxito.
+    // Manejo del formulario para mostrar un mensaje de éxito.
     const contactForm = document.getElementById('contact-form');
     contactForm.addEventListener('submit', function(e) {
-        // Prevenimos que la página se recargue (Formspree lo maneja)
         setTimeout(() => {
             contactForm.reset();
             alert('¡Gracias por tu mensaje! Te contactaré pronto.');
-        }, 1000); // Pequeña demora para asegurar el envío
+        }, 1000);
+    });
+
+    // LÓGICA PARA LA ANIMACIÓN DE SCROLL
+    const sections = document.querySelectorAll('.fade-in-section');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                observer.unobserve(entry.target); // Opcional: deja de observar una vez que es visible
+            }
+        });
+    }, {
+        threshold: 0.1 // La animación se activa cuando el 10% del elemento es visible
+    });
+
+    sections.forEach(section => {
+        observer.observe(section);
     });
 });

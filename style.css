@@ -3,8 +3,8 @@
     --color-fondo: #f4f4f4;
     --color-texto: #333;
     --color-primario: #8B0000; /* Un rojo oscuro y sobrio, inspirado en el logo */
-    --font-titulos: 'Georgia', serif;
-    --font-texto: 'Arial', sans-serif;
+	--font-titulos: 'Playfair Display', serif; /* Una fuente elegante para títulos */
+    --font-texto: 'Poppins', sans-serif;     /* Una fuente moderna y limpia para el texto */
 }
 
 body {
@@ -184,3 +184,17 @@ footer {
     h2 { font-size: 2em; }
     .hero-logo { width: 120px; }
 }
+
+
+/* --- Estilos para la animación de scroll --- */
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px); /* Empieza 30px más abajo */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in-section.is-visible {
+    opacity: 1;
+    transform: translateY(0); /* Vuelve a su posición original */
+}
+
