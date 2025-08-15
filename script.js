@@ -1,4 +1,18 @@
 document.addEventListener('DOMContentLoaded', () => {
+
+    // --- LÓGICA AÑADIDA PARA EL MENÚ DE NAVEGACIÓN ---
+    const navbar = document.querySelector('.navbar');
+    
+    window.addEventListener('scroll', () => {
+        // Si el scroll vertical es mayor a 50px, añade la clase 'scrolled'
+        // Si no, la quita.
+        if (window.scrollY > 50) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+
     // Manejo del formulario para mostrar un mensaje de éxito.
     const contactForm = document.getElementById('contact-form');
     contactForm.addEventListener('submit', function(e) {
