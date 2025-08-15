@@ -1,0 +1,186 @@
+/* --- Variables y Estilos Globales --- */
+:root {
+    --color-fondo: #f4f4f4;
+    --color-texto: #333;
+    --color-primario: #8B0000; /* Un rojo oscuro y sobrio, inspirado en el logo */
+    --font-titulos: 'Georgia', serif;
+    --font-texto: 'Arial', sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: var(--font-texto);
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    line-height: 1.6;
+}
+
+/* --- Hero Section --- */
+.hero {
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('assets/img/foto_de_fondo.jpg'); /* Elige tu mejor foto para el fondo */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero-content {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    border-radius: 5px;
+}
+
+.hero-logo {
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-family: var(--font-titulos);
+    font-size: 3em;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    font-style: italic;
+}
+
+/* --- Secciones Generales --- */
+section {
+    padding: 60px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h2 {
+    font-family: var(--font-titulos);
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
+h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: var(--color-primario);
+    margin: 10px auto 0;
+}
+
+/* --- Servicios --- */
+.services-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background: white;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    width: 300px;
+}
+
+h3 {
+    font-family: var(--font-titulos);
+    color: var(--color-primario);
+}
+
+/* --- Galería --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* --- Contacto --- */
+.contact {
+    background-color: white;
+}
+
+form {
+    max-width: 600px;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: var(--font-texto);
+    font-size: 1em;
+}
+
+button {
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--color-primario);
+    color: white;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #a00000;
+}
+
+.social-links {
+    margin-top: 30px;
+}
+
+.social-links a {
+    margin: 0 15px;
+    color: var(--color-texto);
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom 0.3s ease;
+}
+
+.social-links a:hover {
+    border-bottom: 2px solid var(--color-primario);
+}
+
+/* --- Footer --- */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: #ccc;
+    font-size: 0.9em;
+}
+
+/* --- Responsividad para celulares --- */
+@media (max-width: 768px) {
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 2em; }
+    .hero-logo { width: 120px; }
+}
