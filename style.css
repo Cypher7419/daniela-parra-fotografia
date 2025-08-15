@@ -34,6 +34,8 @@ body {
        ease-out: Hace que la animación termine suavemente.
        forwards: Asegura que la imagen se quede en su estado final (zoom 115%) y no vuelva al inicio.
     */
+	box-sizing: border-box; /* Asegura que el padding se aplique hacia adentro */
+    padding-top: 80px;      /* Empuja el contenido hacia abajo (aprox. la altura del menú) */
 }
 
 .hero-content {
@@ -186,14 +188,6 @@ footer {
     font-size: 0.9em;
 }
 
-/* --- Responsividad para celulares --- */
-@media (max-width: 768px) {
-    h1 { font-size: 2.2em; }
-    h2 { font-size: 2em; }
-    .hero-logo { width: 120px; }
-}
-
-
 /* --- Estilos para la animación de scroll --- */
 .fade-in-section {
     opacity: 0;
@@ -289,12 +283,15 @@ footer {
 }
 
 
-
+/* --- Responsividad para celulares --- */
 /* Estos estilos se aplicarán solo si el ancho de la pantalla es de 768px o menos */
 @media (max-width: 768px) {
-    .nav-logo {
-        font-size: 1.2em;
-    }
+    h1 { font-size: 2.2em; }
+    h2 { font-size: 2em; }
+    .hero-logo { width: 120px; }	
+
+    .nav-logo { font-size: 1.2em; }
+
     .nav-menu {
         gap: 15px;
         font-size: 0.9em;
@@ -309,15 +306,14 @@ footer {
         /* CAMBIO 2: Desactivamos la animación de zoom en móviles */
         /* Esto mejora el rendimiento y la estabilidad visual en pantallas pequeñas. */
         animation: none;
+		
+        box-sizing: border-box;
+        padding-top: 60px; /* Un padding un poco menor para el menú móvil */		
     }
 
     /* Ajuste adicional para que el logo no sea tan grande en la nueva altura */
     .hero-logo {
         width: 100px;
-    }
-
-    h1 {
-        font-size: 2.2em;
     }
 
 }
