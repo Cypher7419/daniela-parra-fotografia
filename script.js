@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     contactForm.addEventListener('submit', function(e) {
         setTimeout(() => {
             contactForm.reset();
-            alert('¡Gracias por tu mensaje! Te contactaré muy pronto. ;)');
+            alert('¡Gracias por tu mensaje! Te contactaré muy pronto!! ;)');
         }, 1000);
     });
 
