@@ -35,7 +35,7 @@ body {
        forwards: Asegura que la imagen se quede en su estado final (zoom 115%) y no vuelva al inicio.
     */
 	box-sizing: border-box; /* Asegura que el padding se aplique hacia adentro */
-    padding-top: 80px;      /* Empuja el contenido hacia abajo (aprox. la altura del menú) */
+    padding-top: 70px;      /* Empuja el contenido hacia abajo (aprox. la altura del menú) */
 }
 
 .hero-content {
@@ -308,7 +308,7 @@ footer {
         animation: none;
 		
         box-sizing: border-box;
-        padding-top: 60px; /* Un padding un poco menor para el menú móvil */		
+        padding-top: 80px; /* Un padding un poco menor para el menú móvil */		
     }
 
     /* Ajuste adicional para que el logo no sea tan grande en la nueva altura */
