@@ -288,7 +288,9 @@ footer {
      border-bottom-color: var(--color-acento);
 }
 
-/* Pequeño ajuste para celulares (un menú de hamburguesa sería el siguiente paso) */
+
+
+/* Estos estilos se aplicarán solo si el ancho de la pantalla es de 768px o menos */
 @media (max-width: 768px) {
     .nav-logo {
         font-size: 1.2em;
@@ -297,4 +299,25 @@ footer {
         gap: 15px;
         font-size: 0.9em;
     }
+	
+    .hero {
+        /* CAMBIO 1: Reducimos la altura en móviles */
+        /* En lugar de ocupar el 100% de la altura, ocupará el 70%. */
+        /* Esto hace que el área a cubrir sea más pequeña, mostrando más de la imagen. */
+        height: 70vh;
+
+        /* CAMBIO 2: Desactivamos la animación de zoom en móviles */
+        /* Esto mejora el rendimiento y la estabilidad visual en pantallas pequeñas. */
+        animation: none;
+    }
+
+    /* Ajuste adicional para que el logo no sea tan grande en la nueva altura */
+    .hero-logo {
+        width: 100px;
+    }
+
+    h1 {
+        font-size: 2.2em;
+    }
+
 }
