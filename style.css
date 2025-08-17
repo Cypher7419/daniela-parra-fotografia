@@ -27,7 +27,7 @@ body {
     text-align: center;
     color: white;
     overflow: hidden; /* Muy importante para que la imagen no se desborde al hacer zoom */
-    animation: kenburns-zoom 10s ease-out forwards;
+    animation: kenburns-zoom 7s ease-out forwards;
     /*
        kenburns-zoom: El nombre de la animación que creamos.
        15s: La duración. Puedes aumentarla para un efecto más lento (ej. 20s) o disminuirla.
@@ -282,38 +282,44 @@ footer {
      border-bottom-color: var(--color-acento);
 }
 
-
-/* --- Responsividad para celulares --- */
 /* Estos estilos se aplicarán solo si el ancho de la pantalla es de 768px o menos */
 @media (max-width: 768px) {
-    h1 { font-size: 2.2em; }
-    h2 { font-size: 2em; }
-    .hero-logo { width: 120px; }	
 
-    .nav-logo { font-size: 1.2em; }
+    .hero {
+        height: 100vh;
+        animation: none;
+        box-sizing: border-box;
+        padding-top: 100px; /* Mantén el valor que te funcionó, ej. 90px */
+    }
 
+    /* --- REGLAS AÑADIDAS PARA AJUSTAR TEXTO EN MÓVIL --- */
+    
+    .hero-logo {
+        width: 100px;
+        margin-bottom: 15px; /* Reducimos el espacio inferior */
+    }
+
+    h1 {
+        /* Reducimos drásticamente el tamaño del título principal */
+        font-size: 2.0em; 
+    }
+    .subtitle {
+        /* Reducimos también el subtítulo */
+        font-size: 1.0em; 
+    }
+    
+    /* Si has añadido más párrafos, podrías crear una clase para ellos y ajustar su tamaño */
+    /* Por ejemplo, en tu imagen veo un párrafo de "Mi misión es...". Si está en el hero, */
+    /* también se reducirá si hereda la fuente del body, o puedes darle su propia regla. */
+
+
+    /* --- Reglas que ya tenías para el menú (no cambian) --- */
+    .nav-logo {
+        font-size: 1.2em;
+    }
     .nav-menu {
         gap: 15px;
         font-size: 0.9em;
     }
-	
-    .hero {
-        /* CAMBIO 1: Reducimos la altura en móviles */
-        /* En lugar de ocupar el 100% de la altura, ocupará el 70%. */
-        /* Esto hace que el área a cubrir sea más pequeña, mostrando más de la imagen. */
-        height: 70vh;
-
-        /* CAMBIO 2: Desactivamos la animación de zoom en móviles */
-        /* Esto mejora el rendimiento y la estabilidad visual en pantallas pequeñas. */
-        animation: none;
-		
-        box-sizing: border-box;
-        padding-top: 100px; /* Un padding un poco menor para el menú móvil */		
-    }
-
-    /* Ajuste adicional para que el logo no sea tan grande en la nueva altura */
-    .hero-logo {
-        width: 100px;
-    }
-
 }
+
