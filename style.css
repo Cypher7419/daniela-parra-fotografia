@@ -162,22 +162,43 @@ button:hover {
     background-color: #a00000;
 }
 
+
 .social-links {
     margin-top: 30px;
+    display: flex; /* Para poner los botones uno al lado del otro */
+    justify-content: center; /* Centra los botones en el espacio disponible */
+    gap: 20px; /* Espacio entre los botones */
+    flex-wrap: wrap; /* Permite que se apilen en pantallas muy pequeñas */
 }
 
-.social-links a {
-    margin: 0 15px;
-    color: var(--color-texto);
+.social-button {
+    /* Estilo del botón */
+    display: inline-flex; /* Alinear icono y texto perfectamente */
+    align-items: center;
+    gap: 10px; /* Espacio entre el icono y el texto */
+    padding: 10px 25px;
+    border: 2px solid #ccc;
+    border-radius: 50px; /* Para que sea un "píldora" redondeada */
     text-decoration: none;
     font-weight: bold;
-    border-bottom: 2px solid transparent;
-    transition: border-bottom 0.3s ease;
+    color: var(--color-texto);
+    
+    /* Efecto de transición */
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
 }
 
-.social-links a:hover {
-    border-bottom: 2px solid var(--color-primario);
+.social-button svg {
+    /* El icono hereda el color del texto */
+    fill: currentColor;
 }
+
+/* Efecto al pasar el mouse (hover) */
+.social-button:hover {
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+    color: white;
+}
+
 
 /* --- Footer --- */
 footer {
